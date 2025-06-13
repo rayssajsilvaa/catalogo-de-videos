@@ -3,59 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Vídeos Disponíveis</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <title>O Ritmo Envolvente do Pagode</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos básicos para a página (similar ao anterior, mas com foco no pagode) */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #8b0000; /* Vermelho escuro, remetendo ao calor do samba/pagode */
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 2.8em;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+        section {
+            background-color: #fff;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #a52a2a; /* Marrom avermelhado */
+            border-bottom: 2px solid #cd5c5c;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .musica-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+        }
+        .musica-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .musica-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-right: 20px;
+            object-fit: cover;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .musica-info h3 {
+            margin: 0 0 5px 0;
+            color: #4a1414; /* Marrom escuro */
+            font-size: 1.5em;
+        }
+        .musica-info p {
+            margin: 0;
+            font-size: 0.95em;
+            color: #555;
+        }
+        .musica-info a {
+            color: #e67e22; /* Laranja */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .musica-info a:hover {
+            text-decoration: underline;
+        }
+        .destaque {
+            font-style: italic;
+            color: #c0392b; /* Vermelho mais escuro */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+
+        /* Responsividade básica */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .musica-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .musica-item img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
 <body>
     <header>
-        <h1>Catálogo de Vídeos Interessantes</h1>
+        <h1>O Som Contagiante do Pagode</h1>
+        <p>Alegria, romantismo e a batucada que move o Brasil.</p>
     </header>
 
-    <main class="video-grid">
-        <div class="video-item">
-            <a href="https://www.youtube.com/watch?v=FfQZ_70D_8U" target="_blank">
-                <img src="https://img.youtube.com/vi/FfQZ_70D_8U/mqdefault.jpg" alt="Miniatura: Turma da Mônica - A Máquina do Tempo">
-            </a>
-            <h2>Turma da Mônica - A Máquina do Tempo</h2>
-            <p>Um episódio clássico onde a Turma da Mônica se aventura em uma inusitada viagem no tempo. Diversão garantida para toda a família!</p>
-        </div>
+    <div class="container">
+        <section id="introducao">
+            <h2>Bem-vindo à Roda de Samba do Pagode</h2>
+            <p>O **pagode** é mais do que um gênero musical; é um fenômeno cultural que nasceu nas rodas de samba do Rio de Janeiro e conquistou o Brasil. Com suas letras que falam de amor, de encontros e do dia a dia, e sua batucada inconfundível, o pagode se tornou a trilha sonora de gerações.</p>
+            <p>Descendente direto do samba, o pagode incorpora instrumentos como o **tantã**, o **rebolo** e o **banjo**, dando-lhe uma sonoridade particular e um ritmo ainda mais envolvente.</p>
+        </section>
 
-        <div class="video-item">
-            <a href="https://www.youtube.com/watch?v=n-P_K4y3QjU" target="_blank">
-                <img src="https://img.youtube.com/vi/n-P_K4y3QjU/mqdefault.jpg" alt="Miniatura: Patrulha Canina - Resgates Especiais">
-            </a>
-            <h2>Patrulha Canina - Resgates Especiais</h2>
-            <p>Acompanhe os filhotes corajosos da Patrulha Canina em uma compilação de seus mais emocionantes resgates. Nenhum trabalho é tão grande, nenhum filhote é tão pequeno!</p>
-        </div>
+        <section id="artistas-iconicos">
+            <h2>Artistas que Fizeram História</h2>
+            <ul>
+                <li>**Fundo de Quintal:** Considerados os "pais" do pagode moderno, revolucionaram o gênero com novos instrumentos e uma batucada criativa.</li>
+                <li>**Exaltasamba:** Um dos maiores grupos dos anos 90 e 2000, com hits românticos que embalaram muitos casais.</li>
+                <li>**Raça Negra:** Pioneiros no estilo "pagode romântico", com um som marcante e letras que tocam o coração.</li>
+                <li>**Sorriso Maroto:** Um dos grupos de maior sucesso na atualidade, mantendo a chama do pagode acesa com novas canções e regravações.</li>
+                <li>**Zeca Pagodinho:** O "embaixador" do pagode, com seu carisma e músicas que celebram a vida e a autenticidade do gênero.</li>
+            </ul>
+        </section>
 
-        <div class="video-item">
-            <a href="https://www.youtube.com/watch?v=sU14zKxP2yI" target="_blank">
-                <img src="https://img.youtube.com/vi/sU14zKxP2yI/mqdefault.jpg" alt="Miniatura: Peppa Pig - O Grande Espirro">
-            </a>
-            <h2>Peppa Pig - O Grande Espirro</h2>
-            <p>Peppa Pig e sua família em uma situação divertida e um pouco caótica por causa de um grande espirro. Muita fofura e risadas!</p>
-        </div>
+        <section id="musicas-destaque">
+            <h2>Clássicos e Hits de Pagode</h2>
+            <div class="musica-item">
+                <a href="https://www.youtube.com/watch?v=seu_video_45" target="_blank">
+                    <img src="https://www.youtube.com/watch?v=seu_video_46" alt="Capa: Cheia de Manias - Raça Negra">
+                </a>
+                <div class="musica-info">
+                    <h3>Cheia de Manias</h3>
+                    <p>Artista: <span class="destaque">Raça Negra</span></p>
+                    <p>Um dos maiores sucessos do pagode romântico, que marcou uma época e continua na boca do povo.</p>
+                    <a href="https://www.youtube.com/watch?v=seu_video_45" target="_blank">Ouvir no YouTube</a>
+                </div>
+            </div>
 
-        <div class="video-item">
-            <a href="https://www.youtube.com/watch?v=o04_7e93S-c" target="_blank">
-                <img src="https://img.youtube.com/vi/o04_7e93S-c/mqdefault.jpg" alt="Miniatura: Bob Esponja - Calça Quadrada">
-            </a>
-            <h2>Bob Esponja - Calça Quadrada</h2>
-            <p>Mergulhe nas aventuras do inimitável Bob Esponja Calça Quadrada e seus amigos na Fenda do Biquíni. Uma dose de humor submarino!</p>
-        </div>
+            <div class="musica-item">
+                <a href="https://www.youtube.com/watch?v=seu_video_47" target="_blank">
+                    <img src="https://www.youtube.com/watch?v=seu_video_48" alt="Capa: Coisa de Pele - Jorge Aragão">
+                </a>
+                <div class="musica-info">
+                    <h3>Coisa de Pele</h3>
+                    <p>Artista: <span class="destaque">Jorge Aragão</span></p>
+                    <p>Um clássico atemporal que representa a essência do samba e pagode de raiz, com uma letra poética e melodia envolvente.</p>
+                    <a href="https://www.youtube.com/watch?v=seu_video_47" target="_blank">Ouvir no YouTube</a>
+                </div>
+            </div>
 
-        <div class="video-item">
-            <a href="https://www.youtube.com/watch?v=XqZsoesa55w" target="_blank">
-                <img src="https://img.youtube.com/vi/XqZsoesa55w/mqdefault.jpg" alt="Miniatura: Baby Shark Dance">
-            </a>
-            <h2>Baby Shark Dance</h2>
-            <p>O fenômeno mundial que fez crianças e adultos dançarem! A música contagiante e o vídeo colorido de Baby Shark.</p>
-        </div>
-    </main>
+            <div class="musica-item">
+                <a href="https://www.youtube.com/watch?v=seu_video_49" target="_blank">
+                    <img src="https://www.youtube.com/watch?v=seu_video_50" alt="Capa: Oceano - Djavan">
+                </a>
+                <div class="musica-info">
+                    <h3>Deixa Acontecer</h3>
+                    <p>Artista: <span class="destaque">Revelação</span></p>
+                    <p>Um hit que celebra a espontaneidade do amor e se tornou um dos pagodes mais cantados em rodas e festas.</p>
+                    <a href="https://www.youtube.com/watch?v=seu_video_49" target="_blank">Ouvir no YouTube</a>
+                </div>
+            </div>
+            
+            <div class="musica-item">
+                <a href="https://www.youtube.com/watch?v=seu_video_51" target="_blank">
+                    <img src="https://www.youtube.com/watch?v=seu_video_52" alt="Capa: Mina de Fé - Art Popular">
+                </a>
+                <div class="musica-info">
+                    <h3>Mina de Fé</h3>
+                    <p>Artista: <span class="destaque">Art Popular</span></p>
+                    <p>Um dos maiores sucessos do Art Popular, com um ritmo contagiante e uma letra que fala sobre uma mulher inspiradora.</p>
+                    <a href="https://www.youtube.com/watch?v=seu_video_51" target="_blank">Ouvir no YouTube</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="curiosidades">
+            <h2>Curiosidades do Pagode</h2>
+            <ul>
+                <li>O termo **"pagode"** antigamente se referia à festa, à reunião de sambistas, e não ao gênero musical em si.</li>
+                <li>O **Cacique de Ramos**, no Rio de Janeiro, é considerado um dos berços do pagode, onde muitos artistas se reuniam para criar e tocar.</li>
+                <li>Instrumentos como o **tantã**, **rebolo** e **banjo com afinação de cavaquinho** foram popularizados no pagode, dando-lhe sua sonoridade característica.</li>
+            </ul>
+        </section>
+    </div>
 
     <footer>
-        <p>© 2025 Seu Nome. Catálogo de Vídeos.</p>
+        <p>Página dedicada à paixão pelo Pagode brasileiro.</p>
+        <p>Desenvolvido por: Seu Nome</p>
     </footer>
 </body>
 </html>
-
-            
